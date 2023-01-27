@@ -1,0 +1,107 @@
+body {
+    background-image: linear-gradient(to right, #8360c3, #2ebf91);  
+}
+.title{
+    text-align: center;
+}
+#game{
+    display: flex;
+    justify-content: center;
+}
+.design{
+    text-decoration: none;
+}
+.design:hover{
+    color: gold;
+}
+.letter{
+    transition: color 1500ms;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;  
+}
+/*playing board design*/
+#board td {
+    width: 90px;
+    height: 90px;
+    border: solid 3px black;
+    border-radius: 10%;
+}
+/* pieces */
+.piece {
+    margin: 5px;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    align-items: center;
+}
+.piece.p1 {
+    background-color: #6b3ec0 ;
+}
+.piece.p2 {
+    background-color: #2ebf91;
+}
+/* column-top */
+#column-top td {
+    border: dashed 2px black;
+}
+#column-top td:hover {
+    background-color: purple;
+}
+/*start btn design*/
+.btn {
+    border: none;
+    padding: 0.8em 2.5em;
+    outline: none;
+    color: white;
+    font-style: 1.2em;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    background: none;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+    position: fixed;
+    left: 45%;
+    max-width: 100%;
+    height: auto;
+}
+.btn:before,
+.btn:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10em;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 105%;
+    height: 105%;
+    content: "";
+    z-index: -2;
+    background-size: 400% 400%;
+    background: linear-gradient(60deg,
+            #f79533,
+            #f37055,
+            #ef4e7b,
+            #a166ab,
+            #5073b8,
+            #1098ad,
+            #07b39b,
+            #6fba82);
+}
+.btn:before {
+    -webkit-filter: blur(7px);
+    filter: blur(7px);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    -webkit-animation: pulse 10s infinite ease;
+    animation: pulse 10s infinite ease;
+}
+.btn:after {
+    -webkit-filter: blur(0.3px);
+    filter: blur(0.3px);
+}
+.btn:hover:before {
+    width: 115%;
+    height: 115%;
+}
